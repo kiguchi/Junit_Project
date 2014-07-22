@@ -23,13 +23,10 @@ public class OtLogTest {
 	/**
 	 * C:/test/log/log.txtを削除してからファイルとして作成する
 	 */
-	
 	PrintWriter pw;
 	@Before
 	public void BEFORE() {
 
-
-		
 		File file=null;
 		file = new File("C:\\test\\log\\log.txt");
 		//check File existence

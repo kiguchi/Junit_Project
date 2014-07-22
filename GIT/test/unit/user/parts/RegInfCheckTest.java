@@ -7,6 +7,7 @@ import org.junit.Test;
 import user.parts.RegInfCheck;
 
 public class RegInfCheckTest {
+	//プロパティファイルに分離するのは文字化けするため断念
 	String input002 ="あいうえおかきくけこ";
 	String input004 ="あいうえおかきくけこさ";
 	String input009 = "１６";
@@ -18,6 +19,7 @@ public class RegInfCheckTest {
 	String msg009 = "年齢は数値(半角)で入力してください。<br />";
 	String msg010_011 ="年齢は数値(半角)で入力してください。<br />年齢は(16-60)の範囲で入力してください。<br />";
 	String msg013 ="登録可能なID（999）を超えています。管理者に問い合わせてください。<br />";
+	
 	public RegInfCheckTest(){
 		
 	}

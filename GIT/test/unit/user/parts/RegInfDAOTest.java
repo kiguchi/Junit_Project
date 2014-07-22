@@ -321,6 +321,7 @@ public class RegInfDAOTest {
 		String actual = null;
 		//execute 
 		actual = dao.getNextId();
+		errorMsg=expected+":"+actual;
 		//assert check
 		assertEquals(errorMsg,expected,actual);
 	}
@@ -366,7 +367,6 @@ public class RegInfDAOTest {
 		}
 		//assert check
 		assertTrue(booleanAssert);
-		
 	}
 
 	
