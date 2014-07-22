@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="C:/Users/iguchihitomi/Desktop/eclipse/plugins/ch.qos.logback.classic_1.0.7.v20121108-1250.jar"/>
+	<classpathentry kind="lib" path="C:/Users/iguchihitomi/Desktop/eclipse/plugins/org.eclipse.equinox.http.servlet_1.1.500.v20140318-1755.jar"/>
+	<classpathentry kind="lib" path="C:/Users/iguchihitomi/Desktop/eclipse/plugins/org.eclipse.jetty.servlet_8.1.14.v20131031.jar"/>
+	<classpathentry kind="lib" path="C:/Users/iguchihitomi/Desktop/eclipse/plugins/org.eclipse.jst.servlet.ui.infopop_1.0.500.v201105122000.jar"/>
+	<classpathentry kind="lib" path="C:/Users/iguchihitomi/Desktop/eclipse/plugins/org.eclipse.jst.servlet.ui_1.1.800.v201403061900.jar"/>
+	<classpathentry kind="lib" path="C:/Users/iguchihitomi/Desktop/eclipse/plugins/javax.servlet.jsp_2.2.0.v201112011158.jar"/>
+	<classpathentry kind="lib" path="C:/Users/iguchihitomi/Desktop/eclipse/plugins/javax.servlet_3.0.0.v201112011016.jar"/>
+	<classpathentry kind="lib" path="C:/Users/iguchihitomi/Desktop/eclipse/plugins/mysql-connector-java-5.1.31.zip"/>
+	<classpathentry kind="lib" path="C:/Users/iguchihitomi/Desktop/eclipse/plugins/junit-4.10.jar"/>
+	<classpathentry kind="lib" path="C:/apache-tomcat-8.0.9/bin/tomcat-juli.jar"/>
+	<classpathentry kind="lib" path="C:/Users/iguchihitomi/Desktop/apache-tomcat-8.0.9 - コピー/bin/tomcat-juli.jar"/>
+	<classpathentry kind="lib" path="C:/Users/iguchihitomi/Desktop/apache-tomcat-8.0.9/bin/tomcat-juli.jar"/>
+	<classpathentry kind="lib" path="C:/hitomi/apache-tomcat-8.0.9/bin/bootstrap.jar"/>
+	<classpathentry kind="lib" path="C:/hitomi/apache-tomcat-8.0.9/lib/annotations-api.jar"/>
+	<classpathentry kind="lib" path="C:/hitomi/apache-tomcat-8.0.9/lib/catalina.jar"/>
+	<classpathentry kind="lib" path="C:/hitomi/apache-tomcat-8.0.9/lib/catalina-ant.jar"/>
+	<classpathentry kind="lib" path="C:/hitomi/apache-tomcat-8.0.9/lib/catalina-ha.jar"/>
+	<classpathentry kind="lib" path="C:/hitomi/apache-tomcat-8.0.9/lib/catalina-storeconfig.jar"/>
+	<classpathentry kind="lib" path="C:/hitomi/apache-tomcat-8.0.9/lib/catalina-tribes.jar"/>
+	<classpathentry kind="lib" path="C:/hitomi/apache-tomcat-8.0.9/lib/ecj-4.4RC4.jar"/>
+	<classpathentry kind="lib" path="C:/hitomi/apache-tomcat-8.0.9/lib/el-api.jar"/>
+	<classpathentry kind="lib" path="C:/hitomi/apache-tomcat-8.0.9/lib/jasper.jar"/>
+	<classpathentry kind="lib" path="C:/hitomi/apache-tomcat-8.0.9/lib/jasper-el.jar"/>
+	<classpathentry kind="lib" path="C:/hitomi/apache-tomcat-8.0.9/lib/jsp-api.jar"/>
+	<classpathentry kind="lib" path="C:/hitomi/apache-tomcat-8.0.9/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="C:/hitomi/apache-tomcat-8.0.9/lib/tomcat-api.jar"/>
+	<classpathentry kind="lib" path="C:/hitomi/apache-tomcat-8.0.9/lib/tomcat-coyote.jar"/>
+	<classpathentry kind="lib" path="C:/hitomi/apache-tomcat-8.0.9/lib/tomcat-dbcp.jar"/>
+	<classpathentry kind="lib" path="C:/hitomi/apache-tomcat-8.0.9/lib/tomcat-i18n-es.jar"/>
+	<classpathentry kind="lib" path="C:/hitomi/apache-tomcat-8.0.9/lib/tomcat-i18n-fr.jar"/>
+	<classpathentry kind="lib" path="C:/hitomi/apache-tomcat-8.0.9/lib/tomcat-i18n-ja.jar"/>
+	<classpathentry kind="lib" path="C:/hitomi/apache-tomcat-8.0.9/lib/tomcat-jdbc.jar"/>
+	<classpathentry kind="lib" path="C:/hitomi/apache-tomcat-8.0.9/lib/tomcat-jni.jar"/>
+	<classpathentry kind="lib" path="C:/hitomi/apache-tomcat-8.0.9/lib/tomcat-spdy.jar"/>
+	<classpathentry kind="lib" path="C:/hitomi/apache-tomcat-8.0.9/lib/tomcat-util.jar"/>
+	<classpathentry kind="lib" path="C:/hitomi/apache-tomcat-8.0.9/lib/tomcat-util-scan.jar"/>
+	<classpathentry kind="lib" path="C:/hitomi/apache-tomcat-8.0.9/lib/tomcat-websocket.jar"/>
+	<classpathentry kind="lib" path="C:/hitomi/apache-tomcat-8.0.9/lib/websocket-api.jar"/>
+	<classpathentry kind="lib" path="C:/Users/iguchihitomi/Desktop/eclipse/plugins/org.eclipse.ui.views.properties.tabbed_3.6.0.v20140519-0906.jar"/>
+	<classpathentry kind="lib" path="C:/Users/iguchihitomi/Desktop/eclipse/plugins/org.eclipse.core.databinding.property_1.4.200.v20140214-0004.jar"/>
+	<classpathentry kind="lib" path="C:/コピー - GIT/WebContent/WEB-INF/lib/mysql-connector-java-5.1.30-bin.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>
