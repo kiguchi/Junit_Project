@@ -10,10 +10,12 @@ import java.sql.SQLException;
 
 
 
+
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
@@ -24,11 +26,15 @@ import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 
 
 
+
 import user.parts.RegInfDAO;
 
 
 
 public class RegInfDAOTest {
+	Connection con = null;
+	PreparedStatement pstm = null;
+	static MysqlDataSource ds = null;
 	
 	String col1="001,鈴木太郎,35";
 	String col2="002,Tommy,25";
@@ -39,7 +45,7 @@ public class RegInfDAOTest {
 	 * Tomcatを使わずにDataSourceを使ってデータベースにアクセスするための設定
 	 */
 	@BeforeClass
-	public static void initJndi()  {    
+	public static  void  initJndi()  {    
 		
 	    System.setProperty(Context.INITIAL_CONTEXT_FACTORY, "org.apache.naming.java.javaURLContextFactory");
 	    System.setProperty(Context.URL_PKG_PREFIXES, "org.apache.naming");
@@ -52,7 +58,7 @@ public class RegInfDAOTest {
 		ic.createSubcontext("java:comp");
 		ic.createSubcontext("java:comp/env");
 		ic.createSubcontext("java:comp/env/jdbc"); 
-		MysqlDataSource ds = new MysqlDataSource();
+		ds = new MysqlDataSource();
 		ds.setUser("root");
 		ds.setPassword("password"); 
 		ds.setURL("jdbc:mysql://localhost/Task"); 
@@ -68,8 +74,7 @@ public class RegInfDAOTest {
 	@Before
 	public void cordinateDataBase() {
 		//getConnection
-		Connection con = null;
-		PreparedStatement pstm = null;
+
 
 		try {
 
@@ -103,8 +108,6 @@ public class RegInfDAOTest {
 	public void UT002_005_pre() {
 
 		//getConnection
-		Connection con = null;
-		PreparedStatement pstm = null;
 
 		try {
 				//現存するテーブルを削除する
@@ -122,6 +125,34 @@ public class RegInfDAOTest {
 		}
 	}
 	
+	@After
+	/**
+	 * コネクションの切断　すっかり忘れていたので7/24追記
+	 */
+	public void closeEtc() {
+
+
+		if(this.con != null){
+			try {
+				this.con.close();
+			} catch (SQLException e) {
+				// TODO 自動生成された catch ブロック
+				e.printStackTrace();
+			}
+		}
+		
+		if(this.pstm != null){
+			try {
+				this.pstm.close();
+			} catch (SQLException e) {
+				// TODO 自動生成された catch ブロック
+				e.printStackTrace();
+			}
+		}	
+		if(this.ds != null){
+			this.ds = null;
+		}
+	}
 	@Test
 	public void UT002_001() {
 
@@ -132,8 +163,8 @@ public class RegInfDAOTest {
 		ResultSet rs=null;
 		//execute 
 		dao.insert("004","佐藤路未央","28");
-		Connection con =FactoryDs.getConnection();
-		PreparedStatement pstm = null;
+		con =FactoryDs.getConnection();
+
 		try {
 			pstm = con.prepareStatement(GetProperties.getPro("selectAll"));
 			rs =pstm.executeQuery();
@@ -183,8 +214,7 @@ public class RegInfDAOTest {
 		//insert
 		dao.update("002","Michael","29");
 		//check result
-		Connection con =FactoryDs.getConnection();
-		PreparedStatement pstm = null;
+		con =FactoryDs.getConnection();
 		try {
 			pstm = con.prepareStatement(GetProperties.getPro("selectAll"));
 			 rs =pstm.executeQuery();
@@ -230,8 +260,7 @@ public class RegInfDAOTest {
 		//delete
 		dao.delete("001");
 		//check result
-		Connection con =FactoryDs.getConnection();
-		PreparedStatement pstm = null;
+		con =FactoryDs.getConnection();
 		try {
 			pstm = con.prepareStatement(GetProperties.getPro("selectAll"));
 			 rs =pstm.executeQuery();
@@ -272,8 +301,7 @@ public class RegInfDAOTest {
 		RegInfDAO dao =new RegInfDAO();
 		//execute 
 		dao.getReglist();
-		Connection con =FactoryDs.getConnection();
-		PreparedStatement pstm = null;
+		con =FactoryDs.getConnection();
 		try {
 			pstm = con.prepareStatement(GetProperties.getPro("selectAll"));
 			 rs =pstm.executeQuery();
@@ -338,8 +366,7 @@ public class RegInfDAOTest {
 		//insert
 		dao.insert("004","佐藤路未央","28");
 		//check result
-		Connection con =FactoryDs.getConnection();
-		PreparedStatement pstm = null;
+		con =FactoryDs.getConnection();
 		try {
 			pstm = con.prepareStatement(GetProperties.getPro("selectAll"));
 			ResultSet rs =pstm.executeQuery();

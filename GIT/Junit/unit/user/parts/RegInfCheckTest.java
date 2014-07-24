@@ -8,12 +8,21 @@ import user.parts.RegInfCheck;
 
 public class RegInfCheckTest {
 	//プロパティファイルに分離するのは文字化けするため断念
-	String input002 ="あいうえおかきくけこ";
-	String input004 ="あいうえおかきくけこさ";
+	String input001 = "1234567890";
+	String input002 = "あいうえおかきくけこ";
+	String input003 = "01234567890";
+	String input004 = "あいうえおかきくけこさ";
+	String input005 = "16";
+	String input006 = "60";
+	String input007 = "15";
+	String input008 = "61";
 	String input009 = "１６";
 	String input010 = "あいうえお";
 	String input011 = "16あいうえお";
+	String input012 = "999";
+	String input013 = "1000";
 	
+	String noErrorMsg ="";
 	String msg003_004 ="名前は10桁以内で入力してください。<br />";
 	String msg007_008 ="年齢は(16-60)の範囲で入力してください。<br />";
 	String msg009 = "年齢は数値(半角)で入力してください。<br />";
@@ -26,21 +35,21 @@ public class RegInfCheckTest {
 	@Test
 	public void UT001_001() {
 		RegInfCheck source =new RegInfCheck();
-		source.checkName("1234567890");
+		source.checkName(input001);
 		String asert = source.getErrMsg();
-		assertEquals(asert, "");
+		assertEquals(asert, noErrorMsg);
 	}
 	@Test
 	public void UT001_002() {
 		RegInfCheck source =new RegInfCheck();
 		source.checkName(input002);
 		String asert = source.getErrMsg();
-		assertEquals(asert, "");
+		assertEquals(asert, noErrorMsg);
 	}
 	@Test
 	public void UT001_003() {
 		RegInfCheck source =new RegInfCheck();
-		source.checkName("01234567890");
+		source.checkName(input003);
 		String asert = source.getErrMsg();
 		assertEquals(asert, msg003_004);
 	}
@@ -54,28 +63,28 @@ public class RegInfCheckTest {
 	@Test
 	public void UT001_005() {
 		RegInfCheck source =new RegInfCheck();
-		source.checkAge("16");
+		source.checkAge(input005);
 		String asert = source.getErrMsg();
-		assertEquals(asert, "");
+		assertEquals(asert, noErrorMsg);
 	}
 	@Test
 	public void UT001_006() {
 		RegInfCheck source =new RegInfCheck();
-		source.checkAge("60");
+		source.checkAge(input006);
 		String asert = source.getErrMsg();
-		assertEquals(asert, "");
+		assertEquals(asert, noErrorMsg);
 	}
 	@Test
 	public void UT001_007() {
 		RegInfCheck source =new RegInfCheck();
-		source.checkAge("15");
+		source.checkAge(input007);
 		String asert = source.getErrMsg();
 		assertEquals(asert, msg007_008);
 	}
 	@Test
 	public void UT001_008() {
 		RegInfCheck source =new RegInfCheck();
-		source.checkAge("61");
+		source.checkAge(input008);
 		String asert = source.getErrMsg();
 		assertEquals(asert, msg007_008);
 	}
@@ -103,14 +112,14 @@ public class RegInfCheckTest {
 	@Test
 	public void UT001_012() {
 		RegInfCheck source =new RegInfCheck();
-		source.checkId("999");
+		source.checkId(input012);
 		String asert = source.getErrMsg();
-		assertEquals(asert, "");
+		assertEquals(asert, noErrorMsg);
 	}
 	@Test
 	public void UT001_013() {
 		RegInfCheck source =new RegInfCheck();
-		source.checkId("1000");
+		source.checkId(input013);
 		String asert = source.getErrMsg();
 		assertEquals(asert, msg013);
 	}
